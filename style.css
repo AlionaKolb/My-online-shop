@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    --pink: #AC7088;
+    --dark: #262020;
+    --yellow: #F5E8C7;
+    --peach: #4d200b;
+    --white: #FFF;
+    --gray: rgb(118, 118, 118);
+    --gold: rgb(238, 175, 58);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    color: var(--white);
+}
+
+body {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.nav a,
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav a:hover,
+footer a:hover {
+    color: var(--dark)
+}
+
+.nav input:focus {
+    outline-color: var(--peach);
+    outline-style: solid;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.site-search {
+    display: flex;
+}
+
+.site-search input {
+    border: 1px solid var(--gray);
+    border-radius: 4px 0 0 4px;
+    background-color: #3b3938;
+    opacity: .5;
+    color: #FFF;
+}
+
+.site-search button {
+    background: var(--peach);
+    border: 1px solid var(--gray);
+    -webkit-text-stroke: 1px var(--peach);
+    border-radius: 0 4px 4px 0;
+    border-left: 0;
+}
+
+#shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.shop-item {
+    width: calc(25% - 17px);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid;
+    backdrop-filter: blur(5px);
+}
+
+.shop-item .content {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.shop-item img {
+    width: 100%;
+    height: 200px;
+    flex-shrink: 3;
+    object-fit: cover;
+}
+
+.shop-item h1 {
+    font-size: 20px;
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+.shop-item p {
+    margin-top: 0;
+}
+
+.shop-item .price {
+    background-color: var(--peach);
+    opacity: .8;
+    padding: 10px 20px;
+    width: 140px;
+    font-weight: 700;
+    border: 1px solid white;
+    box-shadow: 0 8px 16px 0 var(--dark);
+    border-radius: 4px;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.shop-item .total {
+    padding: 10px 20px;
+    background-color: var(--yellow);
+    color: var(--dark);
+    width: 120px;
+    opacity: .6;
+    font-weight: 700;
+    box-shadow: 0 8px 16px 0 var(--dark);
+    border: 1px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.items {
+    background-color: var(--yellow);
+    color: var(--dark);
+    opacity: .6;
+    font-weight: 700;
+    box-shadow: 0 8px 16px 0 var(--dark);
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.items__control {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.items__current,
+.items__weight {
+    display: inline-block;
+}
+
+.shop-item .footer {
+    padding: 10px;
+    align-items: center;
+}
+
+.shop-item .rating {
+    cursor: pointer;
+    color: var(--gold);
+    position: absolute;
+    background-color: var(--peach);
+    box-shadow: 0 8px 16px 0 var(--dark);
+    border: 1px solid white;
+    border-radius: 4px;
+    top: 5px;
+    right: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#nothing-found {
+    margin-top: auto;
+    color: var(--white);
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#sort {
+    background-color: var(--peach);
+    color: var(--white);
+    opacity: .8;
+    padding: 5px;
+    box-shadow: 0 8px 16px 0 var(--dark);
+    border-radius: 4px;
+    border-color: var(--white);
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+}
